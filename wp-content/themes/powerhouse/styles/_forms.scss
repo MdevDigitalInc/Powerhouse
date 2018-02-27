@@ -1,0 +1,96 @@
+form {
+  width: 100%;
+  position: relative;
+}
+
+
+/* stylelint-disable */
+/* Disabled because it is valid and I need this level of control*/
+.mdev-error {
+  border: 1px solid red!important;
+  color: red!important;
+}
+
+input {
+  &[type="text"],
+  &[type="email"],
+  &[type="password"],
+  &[type="search"],
+  &[type="url"] {
+    	width: 90%;
+    	border-radius: $standard-radius;
+	  color: $white;
+	  background: none;
+	  border: 3px solid $pwh-beige;
+	  border-radius: 0;
+    	outline: 0;
+    	transition: border, .3s;
+	  font-size: 16px;
+	  padding: 15px 15px;
+	  
+	  @media #{$tablet-up} {
+		  width: 100%;
+	  }
+	  
+	  @media #{$laptop-up} {
+		  font-size: 1.25vw;
+		  padding: 1.718vw 1.04vw;
+	  }
+	  
+	  &::placeholder {
+		  color: $white;
+		  font-size: 16px;
+		  
+		  @media #{$laptop-up} {
+		  	font-size: 1.25vw;
+		  }
+	  }
+  }
+}
+
+.pwh-input-name {
+	width: 100%;
+	margin-bottom: 10px;
+	
+	@media #{$tablet-only} {
+		width: 48%;
+	}
+	@media #{$laptop-up} {
+	  width: 40%;
+	}
+}
+
+.pwh-input-email {
+	width: 100%;
+	
+	@media #{$tablet-only} {
+		width: 48%;
+	}
+	@media #{$laptop-up} {
+	  width: 55%;
+	}
+}
+
+.pwh-subscribe-btn {
+	padding-top: $pwh-padding-sm;
+	width: 100%;
+	
+	input {
+		@extend .pwh-btn;
+		width: 90%;
+		border: none;
+		cursor: pointer;
+		
+		@media #{$tablet-up} {
+			width: 100%;
+		}
+		
+		@media #{$phone-only} {
+			font-size: 18px;
+		}
+	}
+}
+
+/* stylelint-enable */
+
+
